@@ -5,9 +5,12 @@
 <p> <h5>Brought you by:<%= @recipe.chef.chefname %> </h5>
 </p>
 </div>
-<div class="col-md-8"> 
+<div class="col-md-8">
 <%= link_to "Edit this Recipe", edit_recipe_path(@recipe), class: "btn btn-success pull-right" %>
 <h3> <%= @recipe.summary %> </h3>
+<div class="show_recipe">
+	<%= image_tag(@recipe.picture.url, class: "gravatar") if @recipe.picture? %>
+</div>
 <div class="well">
 <p>
 	<%= @recipe.description %>
