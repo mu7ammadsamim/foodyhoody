@@ -2,7 +2,7 @@
 <h1>Welcome to FoodyHoody</h1>
 
 <h2> Explore FoodyHoody | Make new friends | Learn to cook delicious and amazing food of different countries | Inspire the world with your recipes </h2>
-<%= link_to "sign up now!", "", class: "btn btn-lg btn-success" %>
+<%= link_to "sign up now!", register_path, class: "btn btn-lg btn-success" %>
 </div>
 
 <div class="row">
@@ -16,10 +16,10 @@ View Recipes as Guest User
 
 <div class="col-lg-4">
 <h3 class ="midrow">
-View Recipes as Guest User
+Sign in to your account
 </h3>
-<h2 class="left">Brows and view recipes as a guest and Sign up later</h2>
-<p> <%= link_to "Brows Recipe Listings", recipes_path, class: "btn btn-warning btn-small" %> </p>
+<h2 class="left">Add/update your recipes/create reviews/like-dislike recipes and much much more</h2>
+<p> <%= link_to "Log in to your account", login_path, class: "btn btn-warning btn-small" %> </p>
 </div>
 <div class="col-lg-4">
 <h3 class ="midrow">
