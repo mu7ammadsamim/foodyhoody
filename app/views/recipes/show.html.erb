@@ -14,8 +14,10 @@
 	<%= image_tag(@recipe.picture.url, class: "gravatar") if @recipe.picture? %>
 </div>
 <div class="well">
+<p>Style: <%= render @recipe.styles %></p>
+<p>Ingredient: <%= render @recipe.ingredients %></p>
 <p>
-	<%= @recipe.description %>
+<strong>Steps:</strong>
 </p>
 <%= simple_format(@recipe.description) %>
 <div class="pull-right">
