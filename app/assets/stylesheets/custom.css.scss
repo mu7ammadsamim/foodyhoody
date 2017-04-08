@@ -26,6 +26,7 @@ $navbar-default-color: $light-orange;
 
 body {
 	padding-top: 80px;
+	background-color: #e0e6e2;
 }
 
 .nav_item {
@@ -84,11 +85,11 @@ h2 {
 }
 
 .well {
-	background-color: #EDEDED;
+	background-color: #e0e6e2;
 }
 
 input, textarea, select, .uneditable-input {
-	border: 1px solid #d2d2d2;
+	border: 2px solid #d2d2d2;
 	border-radius: 5px;
 	width: 100%;
 	margin-bottom: 15px;
@@ -111,4 +112,59 @@ span.picture{
 
 .show_recipe {
 	margin: 10px 10px 10px 10px;
+}
+.side {
+   display:inline-block;
+   font-size: 1.5em;
+   width: 49.5%;
+
+
+}
+.side2{
+	font-size: 1.5em;
+     width: 100%;
+	
+}
+.inlineBlock{
+	display:inline-block;
+	width: auto !important;
+}
+
+.right{
+	text-align: right;
+}
+
+.inlineBlockLogin{
+	display:inline-block;
+	width: 30%;
+	font-weight: normal;
+	margin-top: 0px;
+	
+}
+
+
+.inlineBlockButton{
+	display:inline-block;
+	width: 13%;
+	font-weight: normal;
+	text-align: center;
+	margin-top: 0px;
+
+}
+
+.formWhiteColor{
+	color: white;
+	font-size: 0.9em;
+}
+
+.loggedInUser {
+	padding-left: 25px;
+	float: right;
+	margin-top: 25px;
+}
+
+.navItem{
+	margin-left: 25px;
+	float: left;
+	margin-top: 15px;
 }

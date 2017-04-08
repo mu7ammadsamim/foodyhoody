@@ -1,6 +1,7 @@
 <header class="navbar navbar-fixed-top navbar-default">
 
 <div class="container">
+ <!––<%= image_tag("FoodyHoody.png",size: "160x100") %> ––>
 	<%= link_to "FoodyHoody", root_path , class: "btn btn-lg btn-success", id: "logo" %>
 
 <ul class="nav_ul_item">
@@ -54,10 +55,10 @@
 <div class="nav_item">
 <%= link_to "New Recipe", new_recipe_path, class: "btn btn-default btn-warning" %>
 </div>
-<ul class="nav_item">
+<ul class="loggedInUser">
 	<li class="dropdown">
 		<%= link_to '#', class: "btn btn-default btn-danger dropdown-toggle", "data-toggle" => "dropdown" do %>
-		<%= current_user.chefname %> <b class="caret"> </b>
+		<%= current_user.firstname %> <b class="caret"> </b>
 		<% end %>
 		<ul class="dropdown-menu">
 			<li> <%= link_to "View Profile", chef_path(current_user) %> </li>
@@ -68,8 +69,25 @@
 	</li>
 </ul>
 <% else %>
-<div class="nav_item">
-	<%= link_to "Log in", login_path, class: "btn btn-default btn-success" %>
+<div class="navItem">
+	<div class="row">
+ <div class="col-md-12 col-md-offset-6">
+<%= form_tag '/login' do %>
+<div class="inlineBlockLogin">
+<h12 class="formWhiteColor">Email </h12>
+<%= text_field_tag :email %>
+</div>
+<div class="inlineBlockLogin">
+<h12 class="formWhiteColor">Password </h12>
+<%= password_field_tag :password %>
+</div>
+<div class="inlineBlockButton">
+<%= submit_tag 'Login', class: "btn btn-info" %>
+</div>
+ <% end %>
+ 
+ </div>
+</div>
 </div>
 <% end %>
 </div>

@@ -1,9 +1,13 @@
-<%= render 'shared/page_title', title: "Chef: " + @chef.chefname %>
 <div class="row">
-<div class="col-md-4 col-md-offset-4 center">
-<%= gravatar_for @chef, size: 200 %>
-<hr/>
-</div>
+	<div class="col-md-3 col-md-offset-0 center">
+		<%= gravatar_for @chef, size: 350%><br><br><br><br>
+		<strong>Name:  </strong><%= @chef.firstname + " " + @chef.surname %><br>
+		<strong>Sex:  </strong><%=  @chef.gender %><br>
+		<strong>Birthday:  </strong><%=  @chef.dob %><br>
+		<strong>Country:  </strong><%=  @chef.country %><br>
+		<strong>Profile picture:  </strong><%=  @chef.ppicture %><br>
+
+	</div>
 </div>
 
 <div class="row">

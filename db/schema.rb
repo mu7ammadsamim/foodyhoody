@@ -14,12 +14,17 @@
 ActiveRecord::Schema.define(version: 20170406145328) do
 
   create_table "chefs", force: :cascade do |t|
-    t.string   "chefname"
+    t.string   "firstname"
+    t.string   "surname"
     t.string   "email"
+    t.date     "dob"
+    t.string   "country"
+    t.string   "ppicture"
+    t.string   "gender",          limit: 1
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
-    t.boolean  "admin",           default: false
+    t.boolean  "admin",                     default: false
   end
 
   create_table "ingredients", force: :cascade do |t|

@@ -50,10 +50,11 @@ def update
 	end
 
 
+
 private
 
 def chef_params
-	params.require(:chef).permit(:chefname, :email, :password)
+	params.require(:chef).permit(:firstname, :surname, :dob, :email, :country,  :gender, :ppicture, :password)
 
 
 

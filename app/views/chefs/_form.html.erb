@@ -1,17 +1,40 @@
 <%= render 'shared/errors', obj: @chef %>
-<div class="row">
-<div class="well col-md-8 col-md-offset-2">
-	<%= form_for @chef do |f| %>
-	<%= f.label :chefname %>
-	<%= f.text_field :chefname %>
+<div class="row body left">
+ <div class="well col-md-5 col-md-offset-7">
+		<h1>Create an account </h1>
 
-	<%= f.label :email %>
-	<%= f.text_field :email %>
 
-	<%= f.label :password %>
-	<%= f.password_field :password %>
 
-	<%= f.submit(@chef.new_record? ? 'Register' : 'Edit profile', class: "btn btn-success") %>
-	<% end %>
-</div>
+
+	     <%= form_for @chef do |f| %>
+       <div class="side">
+           <%= f.text_field :firstname,  placeholder: "First Name", class: "form-control input-lg"%>
+       </div>
+   	   <div class="side">
+            <%= f.text_field :surname, placeholder: "Surname", class: "form-control input-lg"  %>
+       </div>
+	
+
+	
+     <div class="side2">
+	 		<%= f.text_field :email, placeholder: "Email address", class: "form-control input-lg" %>
+
+			<%= f.label :Birthday %>
+			<%= f.date_field :dob, as: :date, value: f.object.try(:strftime,"%m/%d/%Y"), class: "form-control "%>
+
+			<%= f.text_field :country, placeholder: "Country", class: "form-control input-lg" %>
+
+			<%= f.password_field :password, placeholder: "New password", class: "form-control input-lg"  %>
+           <div class="inlineBlock">
+			   	<%= f.label :gender, "Male",:value => "true", class: "form-control"  %>
+   			   	<%= f.radio_button :gender, true %>
+           </div>
+           <div class="inlineBlock">
+    			<%= f.label :gender, "Female",:value => "false", class: "form-control" %>
+    			<%= f.radio_button :gender, false %>
+	       </div>
+				<%= f.submit(@chef.new_record? ? 'Create an account' : 'Edit profile', class: "btn btn-lg btn-success") %>
+				<% end %>
+	 	</div>
+    </div>
 </div>
