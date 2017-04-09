@@ -25,14 +25,19 @@
 			<%= f.text_field :country, placeholder: "Country", class: "form-control input-lg" %>
 
 			<%= f.password_field :password, placeholder: "New password", class: "form-control input-lg"  %>
+          
+
            <div class="inlineBlock">
 			   	<%= f.label :gender, "Male",:value => "true", class: "form-control"  %>
-   			   	<%= f.radio_button :gender, true %>
+   			   	<%= f.radio_button :gender, true%>
            </div>
            <div class="inlineBlock">
     			<%= f.label :gender, "Female",:value => "false", class: "form-control" %>
     			<%= f.radio_button :gender, false %>
 	       </div>
+
+
+
 				<%= f.submit(@chef.new_record? ? 'Create an account' : 'Edit profile', class: "btn btn-lg btn-success") %>
 				<% end %>
 	 	</div>

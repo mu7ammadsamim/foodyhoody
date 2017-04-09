@@ -8,7 +8,7 @@ class CreateChefs < ActiveRecord::Migration
     	t.date	 :dob
     	t.string :country
     	t.string :ppicture
-    	t.string :gender, :limit => 1
+    	t.boolean :gender, default:  false
     	t.timestamps
     end
   end

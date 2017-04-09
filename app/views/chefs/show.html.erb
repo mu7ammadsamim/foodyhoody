@@ -2,7 +2,15 @@
 	<div class="col-md-3 col-md-offset-0 center">
 		<%= gravatar_for @chef, size: 350%><br><br><br><br>
 		<strong>Name:  </strong><%= @chef.firstname + " " + @chef.surname %><br>
-		<strong>Sex:  </strong><%=  @chef.gender %><br>
+			
+
+			<% if @chef.gender == true %>
+			<strong>Sex: </strong>Male
+			<% else %>
+			<strong>Sex: </strong>Female
+
+			<% end %> <br>
+
 		<strong>Birthday:  </strong><%=  @chef.dob %><br>
 		<strong>Country:  </strong><%=  @chef.country %><br>
 		<strong>Profile picture:  </strong><%=  @chef.ppicture %><br>

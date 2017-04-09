@@ -20,11 +20,11 @@ ActiveRecord::Schema.define(version: 20170406145328) do
     t.date     "dob"
     t.string   "country"
     t.string   "ppicture"
-    t.string   "gender",          limit: 1
+    t.boolean  "gender",          default: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
-    t.boolean  "admin",                     default: false
+    t.boolean  "admin",           default: false
   end
 
   create_table "ingredients", force: :cascade do |t|
